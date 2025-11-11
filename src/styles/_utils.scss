@@ -1,0 +1,12 @@
+@import 'mixins';
+@import 'media';
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+.hidden-mobile {
+  @include tablet {
+    display: none !important;
+  }
+}

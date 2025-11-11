@@ -1,0 +1,45 @@
+.testData {
+  padding: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+
+  h1 {
+    color: var(--text-color);
+    margin-bottom: 20px;
+  }
+
+  p {
+    color: var(--text-color);
+    margin-bottom: 30px;
+    opacity: 0.8;
+  }
+
+  .button {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover:not(:disabled) {
+      background-color: var(--button-color-hover);
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+  .message {
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: var(--second-color);
+    color: var(--text-color);
+    font-weight: 500;
+  }
+}

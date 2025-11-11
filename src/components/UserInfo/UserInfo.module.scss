@@ -1,0 +1,50 @@
+.userInfo {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: var(--main-color);
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.userDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.role {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.group {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.logoutBtn {
+  background-color: var(--button-color);
+  color: var(--button-color-text);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: var(--button-color-hover);
+  }
+}

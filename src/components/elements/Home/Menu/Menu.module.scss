@@ -1,0 +1,67 @@
+.menu {
+  position: fixed;
+  background-color: var(--main-color);
+  height: 100vh;
+  color: var(--text-color);
+  overflow: hidden;
+  min-width: 470px;
+
+  & > .block {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    & > p {
+      text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.1);
+      font-weight: var(--text-weight);
+      font-size: 25px;
+      color: var(--text-color);
+    }
+
+    & > h1 {
+      margin-top: 8px;
+      margin-bottom: 180px;
+      text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.1);
+      font-weight: 400;
+      font-size: 40px;
+      color: var(--text-color);
+    }
+
+    & > .buttonsContainer {
+      display: flex;
+      flex-direction: column;
+      transition: all 0.5s ease;
+      
+
+      & > button.menuButton {
+        margin-top: 20px;
+        display: flex;
+        
+        border: none;
+        border-radius: 40px;
+        box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
+        background-color: var(--second-color);
+        color: var(--text-color);
+        text-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+        font-weight: var(--text-weight);
+        font-size: 25px;
+        transition: transform 0.5s ease;
+
+        a{
+          text-align: start;
+          text-decoration: none;
+          color: var(--text-color);
+          width: 100%;
+          padding: 18px 30px;
+        }
+
+        &:hover {
+          cursor: pointer;
+          background-color: var(--button-color-hover);
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+}

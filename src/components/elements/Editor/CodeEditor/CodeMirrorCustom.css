@@ -1,0 +1,87 @@
+.custom-codemirror .cm-editor {
+  border-radius: 0 40px 40px 40px;
+  font-family: 'Mononoki', sans-serif;
+  background-color: var(--bg-code-color);
+  padding-top: 30px;
+  font-size: 24px;
+  font-weight: 400;
+  padding-left: 35px;
+}
+.custom-codemirror .cm-editor.cm-focused {
+  outline: none !important; 
+  border: none !important;
+}
+.custom-codemirror .cm-gutters {
+  background-color: var(--bg-code-color) !important;
+  border-radius: 40px;
+  border: none;
+}
+
+.custom-codemirror .cm-selectionBackground {
+  background-color: var(--bg-code-color-line) !important;
+  opacity: 1 !important;
+}
+
+.custom-codemirror .cm-selectionLayer .cm-selectionBackground {
+  background-color: var(--bg-code-color-line) !important;
+  opacity: 1 !important;
+}
+
+.custom-codemirror .cm-content ::selection {
+  background: var(--bg-code-color-line) !important;
+  color: var(--text-color) !important;
+}
+
+.custom-codemirror .cm-content ::-moz-selection {
+  background: var(--bg-code-color-line) !important;
+  color: var(--text-color) !important;
+}
+
+.custom-codemirror .cm-cursor {
+  border-left-color: var(--text-color) !important;
+  border-left-width: 3px !important;
+}
+
+.custom-codemirror .cm-content { 
+  color: var(--text-color) !important;
+  font-family: 'Source Code Pro', monospace !important;
+}
+
+.custom-codemirror .cm-lineNumbers .cm-gutterElement {
+  color: #696969;
+  background-color: var(--bg-code-color);
+  border-radius: 40px;
+  border-bottom-right-radius: 0px;
+}
+
+.custom-codemirror .cm-activeLine {
+  background-color: var(--bg-code-color) !important;
+}
+
+.custom-codemirror .cm-activeLineGutter {
+  background-color: var(--bg-code-color) !important;
+}
+
+
+.custom-codemirror .cm-scroller::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-codemirror .cm-scroller::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+.custom-codemirror .cm-scroller::-webkit-scrollbar-thumb {
+  background: #4a5568;
+  border-radius: 4px;
+}
+
+.custom-codemirror .cm-scroller::-webkit-scrollbar-thumb:hover {
+  background: #2d3748;
+}
+
+
+.custom-codemirror .cm-scroller {
+  scrollbar-width: thin;
+  scrollbar-color: #4a5568 transparent;
+}

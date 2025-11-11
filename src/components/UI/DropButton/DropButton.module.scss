@@ -1,0 +1,173 @@
+.dropButton {
+  & > button {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    padding: 18px 30px;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+
+    background-color: var(--second-color);
+    color: var(--text-color);
+    text-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+
+    font-weight: var(--text-weight);
+    font-size: 25px;
+
+    transition: transform 0.3s ease;
+
+    &:hover {
+      cursor: pointer;
+      background-color: var(--button-color-hover);
+      transform: translateY(-2px);
+    }
+
+    & > span {
+
+      .iconAdd {
+        display: inline;
+        & > svg > path {
+          transition: fill 0.3s ease;
+          fill: var(--text-color);
+        }
+        &:hover {
+          & > svg > path {
+            fill: var(--text-color-hover);
+          }
+        }
+      }
+
+      & > .icon {
+        transition: transform 0.5s ease;
+        margin-left: 14px;
+        margin-top: 2px;
+
+        & > g > path {
+          fill: var(--text-color);
+        }
+      }
+
+      & > .icon.rotated {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  & > .list {
+    & > ul {
+      padding: 5px 27px 0;
+      overflow-y: auto;
+      transform-origin: top;
+      animation: scaleIn 0.5s ease-out forwards;
+
+      height: 115px;
+
+      background-color: var(--ul-color);
+      box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.4);
+      border-radius: 0 0 20px 20px;
+
+      margin-inline: 30px;
+
+      list-style: none;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        width: 5px;
+        background-color: rgba($color: #000000, $alpha: 0);
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 3px;
+        background-color: #232323;
+      }
+
+      &::-webkit-scrollbar-track {
+        margin-top: 5px;
+        margin-bottom: 15px;
+      }
+
+      &.closing {
+        animation: scaleOut 0.5s ease-out forwards;
+      }
+
+      & > li {
+        position: relative;
+        text-align: center;
+        font-weight: var(--text-weight);
+        font-size: 20px;
+        border-radius: 40px;
+        transition: background-color 0.2s ease;
+        &:hover {
+          cursor: pointer;
+          background-color: rgb(74, 114, 255);
+        }
+        &:not(:nth-last-child) {
+          margin-bottom: 5px;
+        }
+
+        & > a {
+          display: block;
+          width: 100%;
+          color: var(--text-color);
+          text-decoration: none;
+        }
+      }
+
+      & > .active {
+        background-color: #043cff;
+      }
+
+      &.inline {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        height: auto;
+        max-height: 220px;
+        max-width: 380px;
+        padding: 12px 20px;
+
+        // direct children (cards) alignment
+        > * {
+          flex: 0 0 auto;
+        }
+      }
+    }
+  }
+
+}
+
+
+@keyframes scaleIn {
+  from {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  to {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

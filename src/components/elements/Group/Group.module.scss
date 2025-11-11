@@ -1,0 +1,46 @@
+.group {
+  // margin-left: 100%;
+  // width: 150%;
+
+  & > div {
+    & > .header {
+      border-radius: 0 0 40px 40px;
+      box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.5);
+      background-color: var(--main-color);
+      padding-inline: 30px;
+      height: 100px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      & > h1 {
+        font-weight: 400;
+        font-size: 40px;
+        color: var(--text-color);
+      }
+
+      & > button {
+        border-radius: 40px;
+        box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
+        border: none;
+        background-color: var(--button-color);
+        font-size: 25px;
+        color: white;
+        font-weight: 200;
+        height: 40px;
+        padding-inline: 25px;
+        padding-block: 5px;
+
+        &:hover {
+          background-color: #2d5afb;
+          cursor: pointer;
+        }
+      }
+    }
+
+    & > .students{
+        margin-top: 20px;
+    }
+  }
+}

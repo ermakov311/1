@@ -1,0 +1,74 @@
+@use '../../../styles/mixins' as mixins;  
+@use '../../../styles/media' as media;
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    @include mixins.flex-center;
+    width: 25%;
+    background-color: var(--main-color);
+    border-radius: 40px;
+    padding: 30px 40px;
+
+    @include media.tablet {
+        width: 40%;
+    }
+
+    & > h1 {
+      margin-bottom: 35px;
+      display: block;
+      color: var(--text-color);
+      font-size: 40px;
+      font-weight: 400;
+      text-shadow: 0 4px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    & > form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      @include mixins.flex-center;
+      & > input {
+        display: block;
+        width: 85%;
+        margin-bottom: 35px;
+        height: 65px;
+        border-radius: 40px;
+        background-color: var(--second-color);
+        box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
+        border: none;
+
+        font-weight: 200;
+        font-size: 25px;
+        padding-inline: 20px;
+      }
+
+      & > button {
+        padding-block: 18px;
+        width: 45%;
+        border-radius: 40px;
+        background-color: var(--button-color);
+        color: var(--button-color-text);
+        box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
+        border: none;
+        font-size: 25px;
+
+        @include media.phone{
+            width: 70%;
+        }
+
+        &:hover {
+          cursor: pointer;
+          background-color: #2554ff;
+        }
+      }
+    }
+  }
+}

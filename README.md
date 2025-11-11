@@ -1,1 +1,40 @@
-# 1
+# Grant - Educational Platform
+
+This project has been migrated from React with React Router to Next.js with App Router.
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. Install dependencies:
+```bash
+npm install
+```
+
+2. Run the development server:
+```bash
+npm run dev
+```
+
+3. Run the development server:
+```bash
+npm run sim
+```
+
+3. Open 
+
+
+## Features
+
+- Educational platform interface
+- Group management
+- Task management
+- Code editor integration
+- Scheme editor
+- Redux state management
+- SCSS styling

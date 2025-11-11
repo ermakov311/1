@@ -1,0 +1,35 @@
+$desktop-big: 1230px;
+$desktop: 1100px;
+$tablet: 900px;
+$phone: 580px;
+$small-phone:450px;
+
+@mixin desktop-big {
+  @media (max-width: $desktop-big) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: $phone) {
+    @content;
+  }
+}
+
+@mixin small-phone {
+    @media (max-width: $small-phone) {
+      @content;
+    }
+  }

@@ -1,0 +1,50 @@
+.studentTasks {
+  .header {
+    border-radius: 0 0 40px 40px;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.5);
+    background-color: var(--main-color);
+    padding-inline: 30px;
+    height: 100px;
+    margin-bottom: 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+      font-weight: 400;
+      font-size: 40px;
+      color: var(--text-color);
+    }
+  }
+
+  .tasksContainer {
+    //  display: flex;
+    //  align-items: center;
+    // //  justify-content: space-between;
+  }
+
+  .tasks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .tasksStyle {
+    background-color: #7a7a7a;
+    padding-block: 21px;
+    padding-left: 30px;
+    padding-right: 75px;
+    border-radius: 40px;
+    width: 95%;
+  }
+
+  .loading,
+  .noAssignments {
+    text-align: center;
+    padding: 3rem;
+    font-size: 1.2rem;
+    color: #7a7a7a;
+  }
+}

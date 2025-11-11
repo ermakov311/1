@@ -1,0 +1,32 @@
+.exitButton {
+  width: 93%;
+
+  position: absolute;
+  bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+
+  padding: 18px 30px;
+  border: none;
+  border-radius: 40px;
+  background-color: #858585;
+  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+  font-size: 25px;
+  font-weight: 400;
+  color: white;
+
+  text-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #8d8d8d;
+    transform: translateY(-2px);
+  }
+
+  & > .icon{
+    margin-top: 2px;
+  }
+}

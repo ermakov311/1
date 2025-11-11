@@ -1,0 +1,43 @@
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // margin-bottom: 1rem;
+
+  .taskInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+  }
+
+  .taskName {
+    font-size: 25px;
+    font-weight: var(--text-weight);
+    color: var(--text-color);
+    margin: 0;
+  }
+
+  .taskCreator,
+  .taskDeadline,
+  .taskCompleted {
+    font-size: 16px;
+    color: #7A7A7A;
+    margin: 0;
+  }
+
+  & > .icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    & > span {
+      margin-left: 15px;
+
+      & > svg {
+        padding-top: 5px;
+      }
+    }
+  }
+}

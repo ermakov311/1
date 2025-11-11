@@ -1,0 +1,176 @@
+.codeEditor {
+  position: relative;
+  margin-inline: 40px; // 40px слева от меню и 40px справа от края
+  width: calc(100% - 80px);
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  .editorArea {
+    width: 100%;
+    display: block; // не растягиваем по высоте, чтобы вывод шел сразу под кодом
+    
+    // Ensure CodeMirror fills available width
+    .cm-editor {
+      width: 100%;
+    }
+  }
+
+  .codeName {
+    margin-top: 20px;
+    width: max-content;
+
+    background-color: var(--button-color);
+    border-radius: 40px 40px 0 0;
+    padding: 15px 135px 15px 50px;
+
+    color: white;
+    font-size: 25px;
+    font-weight: var(--text-weight);
+  }
+
+  .outputPanel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+    background-color: var(--bg-code-color);
+    padding: 15px 135px 15px 50px;
+    border-radius: 40px;
+
+    .outputContent {
+      flex: 1;
+    }
+
+    h2 {
+      font-size: 15px;
+      font-weight: var(--text-weight);
+      color: var(--text-color);
+    }
+  }
+}
+
+
+.loading {
+  color: #569cd6;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &::after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border: 2px solid #569cd6;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error {
+  color: #f48771;
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.success {
+  color: #397718;
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.placeholder {
+  color: #858585;
+  font-style: italic;
+}
+
+
+// Tabs and buttons
+.tab {
+  background: var(--bg-code-color);
+  color: var(--text-color);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.activeTab {
+  background: var(--button-color);
+  color: #fff;
+}
+.button {
+  background: var(--button-color);
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.clearButton {
+  background: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--button-color);
+  padding: 8px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+// Modals
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal {
+  background: var(--bg-code-color);
+  color: var(--text-color);
+  border-radius: 16px;
+  padding: 16px;
+  width: min(520px, 92vw);
+}
+.label {
+  display: block;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+.input {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--button-color);
+  background: transparent;
+  color: var(--text-color);
+}
+.textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--button-color);
+  background: transparent;
+  color: var(--text-color);
+}
+.checkboxRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+.modalActions {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+

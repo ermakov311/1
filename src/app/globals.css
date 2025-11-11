@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mononoki:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+html[data-theme='dark'] {
+  background-color: #111111;
+  --main-color: #464646;
+  --second-color: #7a7a7a;
+  --text-color: #ffffff;
+  --button-color: #043cff;
+  --button-color-text: #fff;
+  --button-color-hover: #8d8d8d;
+  --text-weight: 200;
+  --ul-color: #343434;
+  --list-element-color: #7a7a7a;
+  --list-element-color-hover: rgb(192, 192, 192);
+  --text-color-hover: #bcbcbc;
+  --bg-color-blur: #000000d2;
+  --bg-code-color: #232323;
+  --bg-code-color-line: #5e5e5e;
+  --bg-button-code: rgba(122, 122, 122, 0.2);
+}
+
+html[data-theme='light'] {
+  background-color: #eeeeee;
+  --main-color: #b9b9b9;
+  --second-color: #fff;
+  --text-color: #000000;
+  --button-color: #043cff;
+  --button-color-text: #fff;
+  --button-color-hover: #e9e8e8;
+  --text-weight: 400;
+  --ul-color: #cbcbcb;
+  --list-element-color: #858585;
+  --list-element-color-hover: #9b9b9b;
+  --text-color-hover: #5c5c5c;
+  --bg-color-blur: #f2f2f2d2;
+  --bg-code-color: #dcdcdc;
+  --bg-code-color-line: #afafaf;
+  --bg-button-code: rgba(47, 47, 47, 0.2);
+}
+
+.App {
+  display: flex;
+}
+
+#portal-root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  pointer-events: none;
+  background-color: transparent;
+}
+
+#portal-root.open {
+  background-color: var(--bg-color-blur);
+}
+
+#portal-root > * {
+  pointer-events: auto;
+}
