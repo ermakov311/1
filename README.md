@@ -1,7 +1,5 @@
 # Grant - Educational Platform
 
-This project has been migrated from React with React Router to Next.js with App Router.
-
 ## Getting Started
 
 ### Prerequisites
